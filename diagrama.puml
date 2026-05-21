@@ -1,0 +1,46 @@
+@startuml DiagramaDeClasses
+
+skinparam classBackgroundColor White
+skinparam classBorderColor Black
+skinparam arrowColor Black
+skinparam linetype ortho
+hide fields
+hide circle
+
+abstract class Personagem {
+    + getNome() : String
+    + getNivel() : int
+    + getPontoDeVida() : int
+    + setNome(nome : String) : void
+    + setNivel(nivel : int) : void
+    + setPontoDeVida(pv : int) : void
+    + getClasse() : String
+    + clonar() : Personagem
+}
+
+class Guerreiro {
+    + Guerreiro(nome, nivel, pv, armadura)
+    + getArmadura() : int
+    + getClasse() : String
+    + clonar() : Personagem
+}
+
+class Mago {
+    + Mago(nome, nivel, pv, mana)
+    + getMana() : int
+    + getClasse() : String
+    + clonar() : Personagem
+}
+
+class Arqueiro {
+    + Arqueiro(nome, nivel, pv, precisao)
+    + getPrecisao() : int
+    + getClasse() : String
+    + clonar() : Personagem
+}
+
+Personagem <|-- Guerreiro
+Personagem <|-- Mago
+Personagem <|-- Arqueiro
+
+@enduml
