@@ -10,14 +10,6 @@ Um RPG tem três classes de personagem: Guerreiro, Mago e Arqueiro. Cada um tem 
 
 **Prototype** — a classe abstrata `Personagem` define o contrato `clonar()`. Cada subclasse implementa sua própria cópia, retornando uma instância nova com os mesmos atributos. O cliente não precisa conhecer a classe concreta para duplicar um personagem.
 
-## Como rodar
-
-```bash
-cd java-Prototype
-mvn test
-```
-
-7 testes passando.
 
 ## Diagrama de classes
 
